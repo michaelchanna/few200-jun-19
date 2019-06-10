@@ -2,7 +2,7 @@
   <ul class="list-unstyled">
     <li class="alert"
         [ngClass]="{'alert-success': item.completed, 'alert-secondary': !item.completed}"
-        *ngFor="let item of items">
+        *ngFor="let item of todoItems">
       <input type="button"
              (click)="markComplete(item)"
              *ngIf="!item.completed"
