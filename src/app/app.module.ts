@@ -14,6 +14,12 @@ import { RhsComponent } from './components/communications/rhs/rhs.component';
 import { CommunicationsService } from './components/communications/communications.service';
 import { HttpClientModule } from '@angular/common/http';
 import { TodosDataService } from './components/todo-list/todos-data.service';
+
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { reducers } from './reducers';
+import { CounterComponent } from './components/counter/counter.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,12 +30,15 @@ import { TodosDataService } from './components/todo-list/todos-data.service';
     NavComponent,
     CommunicationsComponent,
     LhsComponent,
-    RhsComponent
+    RhsComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot(reducers),
+    StoreDevtoolsModule.instrument()
   ],
   providers: [
     CommunicationsService,
