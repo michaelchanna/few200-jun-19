@@ -4,7 +4,7 @@ import { TodoListItem } from '../models';
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css']
+  styleUrls: ['./list.component.css', '../todo-list.component.css']
 })
 export class ListComponent implements OnInit {
   @Input() todoItems: TodoListItem[];

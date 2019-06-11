@@ -8,6 +8,7 @@ import { EntryComponent } from './components/todo-list/entry/entry.component';
 import { ListComponent } from './components/todo-list/list/list.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavComponent } from './components/nav/nav.component';
+import { CommunicationsComponent } from './components/communications/communications.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NavComponent } from './components/nav/nav.component';
     EntryComponent,
     ListComponent,
     DashboardComponent,
-    NavComponent
+    NavComponent,
+    CommunicationsComponent
   ],
   imports: [
     BrowserModule,
