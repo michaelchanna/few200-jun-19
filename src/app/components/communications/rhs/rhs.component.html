@@ -1,0 +1,12 @@
+<div class="form-group">
+  <input type="button"
+         (click)="getIt()"
+         class="btn btn-primary"
+         value="Get It">
+  <br>
+  <label>{{ message }}</label>
+</div>
+<div>
+  <h3>{{ message$ | async }}</h3>
+  <h3>{{ message2$ | async }}</h3>
+</div>
