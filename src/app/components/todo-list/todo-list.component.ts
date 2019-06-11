@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TodoListItem } from './models';
 import { TodosDataService } from './todos-data.service';
 import { Observable } from 'rxjs';
@@ -25,7 +25,7 @@ export class TodoListComponent implements OnInit {
 
   add(item: string) {
     const description = item;
-
+    this.service.add(description);
   }
 
   clearCompleted() {
