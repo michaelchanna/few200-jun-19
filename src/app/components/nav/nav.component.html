@@ -1,22 +1,27 @@
-<ul class="nav nav-tabs">
-  <li class="nav-item">
-    <a class="nav-link"
-       [routerLinkActive]="['active', 'pretty']"
-       [routerLink]="['dashboard']">Dashboard</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link"
-       [routerLinkActive]="['active', 'pretty']"
-       [routerLink]="['todo-list']">Todo List</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link"
-       [routerLinkActive]="['active', 'pretty']"
-       [routerLink]="['communications']">Communications</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link"
-       [routerLinkActive]="['active', 'pretty']"
-       [routerLink]="['counter']">Redux Counter</a>
-  </li>
-</ul>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="collapse navbar-collapse"
+       id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link"
+           [routerLinkActive]="['active', 'pretty']"
+           [routerLink]="['dashboard']">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"
+           [routerLinkActive]="['active', 'pretty']"
+           [routerLink]="['todo-list']">Todo List</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"
+           [routerLinkActive]="['active', 'pretty']"
+           [routerLink]="['communications']">Communications</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"
+           [routerLinkActive]="['active', 'pretty']"
+           [routerLink]="['counter']">Redux Counter</a>
+      </li>
+    </ul>
+  </div>
+</nav>

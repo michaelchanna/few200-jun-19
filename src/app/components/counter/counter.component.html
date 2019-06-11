@@ -1,17 +1,17 @@
 <br><br>
 <div style="text-align: center">
-  <input type="button"
-         (click)="decrement()"
-         class="btn btn-sm btn-danger"
-         value=" - ">
-  <span> {{ current$ | async }} </span>
-  <input type="button"
-         (click)="increment()"
-         class="btn btn-sm btn-success"
-         value=" + ">
-  &nbsp;
-  <input type="button"
-         (click)="reset()"
-         class="btn btn-sm btn-secondary"
-         value=" RESET ">
+       <input type="button"
+              (click)="decrement()"
+              class="btn btn-sm btn-danger"
+              value=" - ">
+       <span>&nbsp;&nbsp;<b>{{ current$ | async }}</b>&nbsp;&nbsp;</span>
+       <input type="button"
+              (click)="increment()"
+              class="btn btn-sm btn-success"
+              value=" + ">
+       &nbsp;
+       <input type="button"
+              (click)="reset()"
+              class="btn btn-sm btn-secondary"
+              value=" RESET ">
 </div>

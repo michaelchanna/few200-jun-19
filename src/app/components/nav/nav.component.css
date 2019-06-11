@@ -1,4 +1,8 @@
 .pretty {
   color: chocolate;
-  background: rgb(110, 110, 110);
+  /*background: rgb(110, 110, 110);*/
+}
+.customHeader {
+  border-bottom-color: white;
+  border-bottom-width: 1px;
 }
