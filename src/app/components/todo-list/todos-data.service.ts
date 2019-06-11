@@ -7,7 +7,6 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class TodosDataService {
 
-
   cached: TodoListItem[] = [];
   data = new BehaviorSubject<TodoListItem[]>([]);
 
@@ -28,7 +27,7 @@ export class TodosDataService {
   add(description: string) {
     this.http.post<TodoListItem>('http://localhost:3000/todos', { description })
       .subscribe(r => {
-        this.cached.push(r);
+        this.cached = [r, ...this.cached];
         this.data.next(this.cached);
       });
   }
