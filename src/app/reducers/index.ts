@@ -13,6 +13,7 @@ export const reducers = {
 
 // 2. A selector for each "branch" of the features state
 const selectCounterBranch = (state: State) => state.counter;
+
 // 3. Any helpers, etc?
 
 // 4. The selectors that are needed for the components.
@@ -20,3 +21,4 @@ const selectCounterBranch = (state: State) => state.counter;
 export const selectCurrentCount = createSelector(selectCounterBranch, b => b.current);
 export const selectAtZero = createSelector(selectCurrentCount, c => c === 0);
 export const selectCountingBy = createSelector(selectCounterBranch, b => b.by);
+export const selectDecrementDisabled = createSelector(selectCurrentCount, selectCountingBy, (current, by) => (current - by) < 0);

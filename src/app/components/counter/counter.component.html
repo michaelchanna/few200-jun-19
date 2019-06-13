@@ -2,7 +2,7 @@
 <div style="text-align: center">
   <input type="button"
          (click)="decrement()"
-         [disabled]="atZero$ | async"
+         [disabled]="decrementDisabled$ | async"
          class="btn btn-sm btn-danger"
          value=" - ">
   <span>&nbsp;&nbsp;<b>{{ current$ | async }}</b>&nbsp;&nbsp;</span>
