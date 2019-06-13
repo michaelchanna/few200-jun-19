@@ -7,3 +7,5 @@ export interface State {
 export const reducers = {
   counter: fromCounter.reducer
 };
+
+export const selectCurrentCount = (state: State) => state.counter.current;
