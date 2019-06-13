@@ -7,6 +7,7 @@ import * as applicationActions from '../actions/app.actions';
 @Injectable()
 export class CounterEffects {
 
+  // LOG OUT TO THE CONSOLE EACH ACTION
   // logItOut = createEffect(() =>
   //   this.actions$
   //     .pipe(
