@@ -10,6 +10,7 @@ import { ShoppingItem } from './models';
   styleUrls: ['./shopping.component.css']
 })
 export class ShoppingComponent implements OnInit {
+
   items$: Observable<ShoppingItem[]>;
   constructor(private store: Store<State>) { }
 

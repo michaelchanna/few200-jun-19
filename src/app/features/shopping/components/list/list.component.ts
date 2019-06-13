@@ -8,8 +8,8 @@ import { ShoppingItem } from '../../models';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ListComponent implements OnInit {
-  @Input() items: ShoppingItem[] = [];
 
+  @Input() items: ShoppingItem[] = [];
   constructor() { }
 
   ngOnInit() {
