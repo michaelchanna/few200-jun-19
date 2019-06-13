@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { State } from '../../reducers';
+import { itemAddedToList } from '../../actions/list.actions';
 
 @Component({
   selector: 'app-entry',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EntryComponent implements OnInit {
 
-  constructor() { }
+  constructor(private store: Store<State>) { }
 
   ngOnInit() {
   }
 
+  add(item: HTMLInputElement) {
+    const description = item.value;
+    this.store.dispatch(itemAddedToList({ description }));
+    item.value = '';
+    item.focus();
+  }
 }

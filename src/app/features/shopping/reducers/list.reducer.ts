@@ -14,7 +14,7 @@ export const initialListState: ListState = {
   entities: {
     X03939: {
       id: 'X03939',
-      description: 'taco shells'
+      description: 'Beer'
     }
   }
 };
