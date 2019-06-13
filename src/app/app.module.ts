@@ -19,6 +19,8 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { reducers } from './reducers';
 import { CounterComponent } from './components/counter/counter.component';
+import { EffectsModule } from '@ngrx/effects';
+import { CounterEffects } from './effects/counter.effects';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,8 @@ import { CounterComponent } from './components/counter/counter.component';
         strictStateSerializability: true,
       }
     }),
-    StoreDevtoolsModule.instrument()
+    StoreDevtoolsModule.instrument(),
+    EffectsModule.forRoot([CounterEffects])
   ],
   providers: [
     CommunicationsService,
