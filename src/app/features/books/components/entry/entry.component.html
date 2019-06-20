@@ -1,0 +1,27 @@
+<div class="form-group formFields">
+       <label for="book">Book To Add</label>
+       <div class="formFieldsContainer">
+              <input name="title"
+                     class="form-control"
+                     #title>
+       </div>
+       <div class="formFieldsContainer">
+              <input name="author"
+                     class="form-control"
+                     #author>
+       </div>
+       <div class="formFieldsContainer">
+              <select name="format"
+                      class="form-control"
+                      #format>
+                     <option value="Hardcover">Hardcover</option>
+                     <option value="Paperback">Paperback</option>
+                     <option value="E-book">E-book</option>
+              </select>
+       </div>
+       <div class="formButtonContainer">
+              <input type="button"
+                     (click)="add(title, author, format)"
+                     class="btn btn-primary"
+                     value="Add">
+       </div>

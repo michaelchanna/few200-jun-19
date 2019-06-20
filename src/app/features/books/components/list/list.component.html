@@ -1,0 +1,14 @@
+<div class="alert alert-info"
+     *ngIf="books.length === 0">
+  You have no books on your list. Add Them!
+</div>
+
+<ul class="list-unstyled">
+  <li class="alert alert-success"
+      *ngFor="let book of books">
+    <h4>{{ book.title }}</h4>
+    {{ book.format }} <i>written by</i> {{ book.author }} <br>
+
+  </li>
+
+</ul>

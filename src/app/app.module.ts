@@ -22,6 +22,7 @@ import { CounterComponent } from './components/counter/counter.component';
 import { EffectsModule } from '@ngrx/effects';
 import { CounterEffects } from './effects/counter.effects';
 import { ShoppingModule } from './features/shopping/shopping.module';
+import { BooksModule } from './features/books/books.module';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { ShoppingModule } from './features/shopping/shopping.module';
     AppRoutingModule,
     HttpClientModule,
     ShoppingModule,
+    BooksModule,
     StoreModule.forRoot(reducers, {
       runtimeChecks: {
         strictActionImmutability: true,
